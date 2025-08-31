@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the calculator -->
+    <div class="calculator">
+        
+        <!-- Display screen that shows numbers and results -->
+        <div class="display">
+            <div class="previous-number" id="previousNumber"></div>
+            <div class="current-number" id="currentNumber">0</div>
+        </div>
+        
+        <!-- All the calculator buttons -->
+        <div class="buttons">
+            <!-- First row: Clear and operators -->
+            <button class="btn clear" onclick="clearAll()">C</button>
+            <button class="btn operator" onclick="chooseOperation('/')">/</button>
+            <button class="btn operator" onclick="chooseOperation('*')">×</button>
+            <button class="btn operator" onclick="chooseOperation('-')">-</button>
+            
+            <!-- Second row: Numbers 7, 8, 9 and plus -->
+            <button class="btn number" onclick="addNumber('7')">7</button>
+            <button class="btn number" onclick="addNumber('8')">8</button>
+            <button class="btn number" onclick="addNumber('9')">9</button>
+            <button class="btn operator plus" onclick="chooseOperation('+')">+</button>
+            
+            <!-- Third row: Numbers 4, 5, 6 -->
+            <button class="btn number" onclick="addNumber('4')">4</button>
+            <button class="btn number" onclick="addNumber('5')">5</button>
+            <button class="btn number" onclick="addNumber('6')">6</button>
+            
+            <!-- Fourth row: Numbers 1, 2, 3 and equals -->
+            <button class="btn number" onclick="addNumber('1')">1</button>
+            <button class="btn number" onclick="addNumber('2')">2</button>
+            <button class="btn number" onclick="addNumber('3')">3</button>
+            <button class="btn equals" onclick="calculate()" rowspan="2">=</button>
+            
+            <!-- Fifth row: Zero and decimal point -->
+            <button class="btn number zero" onclick="addNumber('0')">0</button>
+            <button class="btn number" onclick="addDecimal()">.</button>
+        </div>
+    </div>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>

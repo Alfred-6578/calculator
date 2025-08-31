@@ -1,0 +1,135 @@
+/* Simple styles for our calculator */
+
+/* Remove default spacing and make everything look consistent */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main calculator container */
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+/* Display screen styling */
+.display {
+    background-color: #000;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: right;
+    min-height: 80px;
+}
+
+/* Previous number (smaller text at top) */
+.previous-number {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 5px;
+    min-height: 20px;
+}
+
+/* Current number (big text at bottom) */
+.current-number {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Container for all buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Basic button styling */
+.btn {
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Number buttons (gray) */
+.number {
+    background-color: #666;
+    color: white;
+}
+
+.number:hover {
+    background-color: #777;
+}
+
+/* Operator buttons (orange) */
+.operator {
+    background-color: #ff9500;
+    color: white;
+}
+
+.operator:hover {
+    background-color: #ffad33;
+}
+
+/* Equals button (orange, takes 2 rows) */
+.equals {
+    background-color: #ff9500;
+    color: white;
+    grid-row: span 2;
+}
+
+.equals:hover {
+    background-color: #ffad33;
+}
+
+/* Clear button (red) */
+.clear {
+    background-color: #ff4444;
+    color: white;
+}
+
+.clear:hover {
+    background-color: #ff6666;
+}
+
+/* Zero button takes 2 columns */
+.zero {
+    grid-column: span 2;
+}
+
+/* Make calculator smaller on phones */
+@media (max-width: 400px) {
+    .calculator {
+        width: 250px;
+        padding: 15px;
+    }
+    
+    .btn {
+        height: 50px;
+        font-size: 16px;
+    }
+    
+    .current-number {
+        font-size: 24px;
+    }
+}
